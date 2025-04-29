@@ -1,19 +1,38 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 const RegistrationForm: React.FC = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+    terms: false
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: type === 'checkbox' ? checked : value
+    }));
+  };
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "¡Registro recibido!",
-      description: "Te hemos enviado un correo electrónico para confirmar tu cuenta.",
+      description: "Por favor, completa tu información fiscal.",
       variant: "default",
     });
+    navigate('/rfc');
   };
 
   return (
@@ -39,6 +58,8 @@ const RegistrationForm: React.FC = () => {
                   placeholder="Tu nombre"
                   required
                   className="w-full"
+                  value={formData.firstName}
+                  onChange={handleChange}
                 />
               </div>
               <div>
@@ -51,6 +72,8 @@ const RegistrationForm: React.FC = () => {
                   placeholder="Tu apellido"
                   required
                   className="w-full"
+                  value={formData.lastName}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -65,6 +88,8 @@ const RegistrationForm: React.FC = () => {
                 placeholder="tu@correo.com"
                 required
                 className="w-full"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             
@@ -77,6 +102,8 @@ const RegistrationForm: React.FC = () => {
                 type="tel"
                 placeholder="55 1234 5678"
                 className="w-full"
+                value={formData.phone}
+                onChange={handleChange}
               />
             </div>
             
@@ -90,6 +117,8 @@ const RegistrationForm: React.FC = () => {
                 placeholder="Crea una contraseña segura"
                 required
                 className="w-full"
+                value={formData.password}
+                onChange={handleChange}
               />
             </div>
             
@@ -99,6 +128,8 @@ const RegistrationForm: React.FC = () => {
                 name="terms"
                 type="checkbox"
                 required
+                checked={formData.terms}
+                onChange={handleChange}
                 className="h-4 w-4 rounded border-gray-300 text-resico-red focus:ring-resico-red mt-1"
               />
               <label htmlFor="terms" className="ml-2 block text-sm text-resico-medium-gray">
