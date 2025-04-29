@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Shield, Lock, FileCheck, Database } from 'lucide-react';
+import { Shield, Lock, FileCheck, Database, Check } from 'lucide-react';
 
 const SecuritySection: React.FC = () => {
   return (
@@ -50,7 +49,7 @@ const SecuritySection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center mb-8">
             <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6">
               <Shield size={40} className="text-resico-red" />
             </div>
