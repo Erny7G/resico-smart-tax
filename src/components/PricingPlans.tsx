@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Check, Shield } from 'lucide-react';
+import { Check, Shield, BookOpen, Video } from 'lucide-react';
 
 const PricingPlans: React.FC = () => {
   return (
@@ -45,6 +45,10 @@ const PricingPlans: React.FC = () => {
               <li className="feature-item">
                 <Check className="text-green-500" size={18} />
                 <span>Asesoría incluida todo el año.</span>
+              </li>
+              <li className="feature-item">
+                <Check className="text-green-500" size={18} />
+                <span>Acceso a cursos básicos del Centro de Capacitación.</span>
               </li>
               <li className="feature-item">
                 <Check className="text-green-500" size={18} />
@@ -94,6 +98,14 @@ const PricingPlans: React.FC = () => {
                 <Check className="text-green-500" size={18} />
                 <span>Reportes financieros personalizados.</span>
               </li>
+              <li className="feature-item">
+                <Check className="text-green-500" size={18} />
+                <span>Acceso completo al Centro de Capacitación con todos los cursos y videos.</span>
+              </li>
+              <li className="feature-item">
+                <Check className="text-green-500" size={18} />
+                <span>Asistencia prioritaria vía chat (24h).</span>
+              </li>
             </ul>
           </div>
 
@@ -102,7 +114,7 @@ const PricingPlans: React.FC = () => {
             <div className="flex items-center mb-4">
               <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">PLUS</div>
             </div>
-            <h3 className="text-2xl font-bold mb-2">$1,200 <span className="text-lg font-normal text-resico-medium-gray">al año</span></h3>
+            <h3 className="text-2xl font-bold mb-2">$750 <span className="text-lg font-normal text-resico-medium-gray">al año</span></h3>
             <p className="text-resico-medium-gray mb-4">
               Más allá de lo básico, asesoría premium: Sin preocupaciones, sin trámites.
             </p>
@@ -126,6 +138,10 @@ const PricingPlans: React.FC = () => {
               <li className="feature-item">
                 <Check className="text-green-500" size={18} />
                 <span>Asesor dedicado a ti durante todo el proceso.</span>
+              </li>
+              <li className="feature-item">
+                <Check className="text-green-500" size={18} />
+                <span>Acceso a cursos selectos del Centro de Capacitación.</span>
               </li>
               <li className="feature-item">
                 <Check className="text-green-500" size={18} />
