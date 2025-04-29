@@ -57,7 +57,7 @@ const PricingPlans: React.FC = () => {
             </ul>
           </div>
 
-          {/* RESICO PRO Plan */}
+          {/* RESICO PRO Plan - Updated price to $750/year */}
           <div className="plan-card border-resico-red border-2 relative">
             <div className="absolute -top-4 -right-4 bg-resico-red text-white rounded-full px-3 py-1 text-sm font-semibold">
               MEJOR PRECIO
@@ -65,7 +65,7 @@ const PricingPlans: React.FC = () => {
             <div className="flex items-center mb-4">
               <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PRO</div>
             </div>
-            <h3 className="text-2xl font-bold mb-2">$900 <span className="text-lg font-normal text-resico-medium-gray">al mes</span></h3>
+            <h3 className="text-2xl font-bold mb-2">$750 <span className="text-lg font-normal text-resico-medium-gray">al año</span></h3>
             <p className="text-resico-medium-gray mb-4">
               La solución sin esfuerzo para tu declaración: de forma sencilla y precisa.
             </p>
@@ -109,12 +109,12 @@ const PricingPlans: React.FC = () => {
             </ul>
           </div>
 
-          {/* PLUS Plan */}
+          {/* PLUS Plan - Verified to be $1200/year but pricing in UI shows as $750/year - updating to match */}
           <div className="plan-card">
             <div className="flex items-center mb-4">
               <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">PLUS</div>
             </div>
-            <h3 className="text-2xl font-bold mb-2">$750 <span className="text-lg font-normal text-resico-medium-gray">al año</span></h3>
+            <h3 className="text-2xl font-bold mb-2">$1,200 <span className="text-lg font-normal text-resico-medium-gray">al año</span></h3>
             <p className="text-resico-medium-gray mb-4">
               Más allá de lo básico, asesoría premium: Sin preocupaciones, sin trámites.
             </p>
